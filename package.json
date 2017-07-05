@@ -9,9 +9,6 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.4.1",
-    "grunt": "^0.4.5",
-    "grunt-browserify": "^4.0.1",
-    "grunt-contrib-uglify": "^2.2.0",
     "mocha": "^3.4.2"
   },
   "dependencies": {
@@ -29,13 +26,14 @@
     "url": "https://github.com/master-atul/rss-parser/issues"
   },
   "homepage": "https://github.com/master-atul/rss-parser#readme",
-  "description": "A simple, light-weight RSS parser. Parse strings, URLs, or files and get a JS object back",
+  "description": "A simple, light-weight RSS parser for browser. Parse strings, URLs, or files and get a JS object back",
   "keywords": [
     "RSS",
     "RSS to JSON",
     "RSS reader",
     "RSS parser",
     "RSS to JS",
-    "Feed reader"
+    "Feed reader",
+    "browser"
   ]
 }
