@@ -12,6 +12,12 @@ var OUT_DIR = __dirname + '/output';
 var INPUT_FILE = __dirname + '/input/reddit.rss';
 var OUTPUT_FILE = __dirname + '/output/reddit.json';
 
+Parser.parseFile = function(file, options, callback) {
+  FS.readFile(file, 'utf8', function(err, contents) {
+    return Parser.parseString(contents, options, callback);
+  })
+}
+
 describe('Parser', function() {
   var testParseForFile = function(name, ext, done) {
     Parser.parseFile(IN_DIR + '/' + name + '.' + ext, function(err, parsed) {

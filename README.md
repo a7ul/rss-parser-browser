@@ -1,19 +1,25 @@
-# rss-parser
+# rss-parser-browser
 
-[![Build Status](https://travis-ci.org/bobby-brennan/rss-parser.svg?branch=master)](https://travis-ci.org/bobby-brennan/rss-parser)
+[![Build Status](https://travis-ci.org/master-atul/rss-parser-browser.svg?branch=master)](https://travis-ci.org/master-atul/rss-parser-browser)
+
+This is a direct clone from https://github.com/bobby-brennan/rss-parser
+
+I have removed the node dependencies so that it works with webpack in browser.
+
+All credits should go to bobby-brennan.
 
 ## Installation
-You can install via npm or bower:
+You can install via npm:
 ```bash
-npm install --save rss-parser
+npm install --save rss-parser-browser
 # or
-bower install --save rss-parser
+yarn add rss-parser-browser
 ```
 
 ## Usage
-You can parse RSS from a URL, local file (NodeJS only), or a string.
+You can parse RSS from a URL or a string.
 * `parseString(xml, [options,],  callback)`
-* `parseFile(filename, [options,], callback)`
+
 * `parseURL(url, [options,] callback)`
 
 
@@ -25,9 +31,9 @@ Check out the full output format in [test/output/reddit.json](test/output/reddit
 * Both `dc:date` and `pubDate` will be available in ISO 8601 format as `isoDate`
 * If `author` is specified, but not `dc:creator`, `creator` will be set to `author` ([see article](http://www.lowter.com/blogs/2008/2/9/rss-dccreator-author))
 
-### NodeJS
+### Usage
 ```js
-var parser = require('rss-parser');
+var parser = require('rss-parser-browser');
 
 parser.parseURL('https://www.reddit.com/.rss', function(err, parsed) {
   console.log(parsed.feed.title);
@@ -35,18 +41,6 @@ parser.parseURL('https://www.reddit.com/.rss', function(err, parsed) {
     console.log(entry.title + ':' + entry.link);
   })
 })
-```
-### Web
-```html
-<script src="/bower_components/rss-parser/dist/rss-parser.min.js"></script>
-<script>
-RSSParser.parseURL('https://www.reddit.com/.rss', function(err, parsed) {
-  console.log(parsed.feed.title);
-  parsed.feed.entries.forEach(function(entry) {
-    console.log(entry.title + ':' + entry.link);
-  })
-})
-</script>
 ```
 
 ### Redirects

@@ -1,17 +1,18 @@
 {
-  "name": "rss-parser",
-  "version": "2.10.0",
+  "name": "rss-parser-browser",
+  "version": "2.2.0",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "Bobby Brennan",
+  "author": "Atul R",
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.4.1",
     "grunt": "^0.4.5",
     "grunt-browserify": "^4.0.1",
-    "grunt-contrib-uglify": "^2.2.0"
+    "grunt-contrib-uglify": "^2.2.0",
+    "mocha": "^3.4.2"
   },
   "dependencies": {
     "entities": "^1.1.1",
@@ -22,12 +23,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bobby-brennan/rss-parser.git"
+    "url": "git+https://github.com/master-atul/rss-parser.git"
   },
   "bugs": {
-    "url": "https://github.com/bobby-brennan/rss-parser/issues"
+    "url": "https://github.com/master-atul/rss-parser/issues"
   },
-  "homepage": "https://github.com/bobby-brennan/rss-parser#readme",
+  "homepage": "https://github.com/master-atul/rss-parser#readme",
   "description": "A simple, light-weight RSS parser. Parse strings, URLs, or files and get a JS object back",
   "keywords": [
     "RSS",

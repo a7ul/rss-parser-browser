@@ -284,9 +284,3 @@ Parser.parseURL = function(feedUrl, options, callback) {
   })
   req.on('error', callback);
 }
-
-Parser.parseFile = function(file, options, callback) {
-  FS.readFile(file, 'utf8', function(err, contents) {
-    return Parser.parseString(contents, options, callback);
-  })
-}
