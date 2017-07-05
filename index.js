@@ -1,7 +1,6 @@
 'use strict';
 
 var Entities = require("entities");
-var FS = require('fs');
 var url = require('url');
 var XML2JS = require('xml2js');
 
